@@ -35,4 +35,9 @@ RUN /wal-g --help
 # Alpine container
 
 FROM alpine:3.16.2
+
+LABEL org.opencontainers.image.source=https://github.com/avestura/walg-docker
+LABEL org.opencontainers.image.description="WAL-G bundled with Google's Brotli"
+LABEL org.opencontainers.image.licenses=MIT
+
 COPY --from=builder /wal-g /
